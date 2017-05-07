@@ -1,4 +1,4 @@
 // @flow
 
-import tooltipDebounce from './tooltipDebounce';
-export default tooltipDebounce;
+import debounceDecorator from './debounceDecorator';
+export default debounceDecorator;
