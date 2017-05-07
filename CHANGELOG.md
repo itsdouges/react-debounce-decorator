@@ -6,10 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 ## [Unreleased][]
+## Changed
+- Packagejson
 
 ## [0.1.0][] - 2017-05-07
 ### Changed
-- Things that have changed
+- Initial release
 
 
 [Unreleased]: https://github.com/madou/react-debounce-decorator/compare/v0.1.0...HEAD
