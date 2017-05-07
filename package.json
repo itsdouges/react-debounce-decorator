@@ -2,7 +2,10 @@
   "name": "react-debounce-decorator",
   "version": "0.1.1",
   "description": "Injects hide and show props into a wrapped component.",
-  "repository": "madou/react-debounce-decorator",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madou/react-debounce-decorator.git"
+  },
   "author": "Michael Dougall",
   "license": "MIT",
   "keywords": [],
@@ -119,5 +122,12 @@
         ]
       }
     }
+  },
+  "bugs": {
+    "url": "https://github.com/madou/react-debounce-decorator/issues"
+  },
+  "homepage": "https://github.com/madou/react-debounce-decorator#readme",
+  "directories": {
+    "test": "test"
   }
 }
