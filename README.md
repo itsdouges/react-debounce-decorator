@@ -21,42 +21,43 @@ npm install react-debounce-decorator
 ## Usage
 
 ```javascript
-import 'react-debounce-decorator/styles.css';
-import ReactStickyHeader from 'react-debounce-decorator';
-import ReactDOM from 'react-dom';
+// If using flow, grab the injected props type.
 
-ReactDOM.render(
-  <ReactStickyHeader
-    // This will be the sticky strip.
-    header={
-      <div className={cx('Header_root', { sticky })}>
-        <h1 className="Header_title">ReactStickyHeader</h1>
+import type { InjectedProps } from 'react-debounce-decorator';
+import debounceDecorator from 'react-debounce-decorator';
 
-        <ul className="Header_links">
-          <li className="Header_link">When</li>
-          <li className="Header_link">Why</li>
-          <li className="Header_link">About</li>
-        </ul>
-      </div>
-    }
-  >
-    <section>
-      // More header stuff here, this won't be sticky.
-    </section>
-  </ReactStickyHeader>,
-  document.getElementById('container')
-);
+debounceDecorator(150)(
+class TooltipTrigger extends Component {
+  props: InjectedProps & {
+    message: string,
+  };
+
+  show = (e) => {
+    const { message, show, showTooltip } = this.props;
+
+    // Call injected prop `show` when mouse enter. This will be called immedaitely.
+    show(() => showTooltip(true, message));
+  };
+
+  hide = (e) => {
+    const { hide, showTooltip } = this.props;
+
+    // Call injected prop `hide` on mouse leave. This will be debounced.
+    hide(() => showTooltip(false));
+  };
+
+  render () {
+    return cloneElement(this.props.children, {
+      onMouseEnter: this.show,
+      onMouseLeave: this.hide,
+    });
+  }
+})
+
 ```
 
-| prop | type | required |
-|-|-|-|
-| children | Children  | no |
-| header | Children | yes |
-| backgroundImage | string | no |
-| backgroundColor | string | no |
-| headerOnly | boolean | no |
-| onSticky | (boolean) => void | no |
-| className | string | no |
+## debounceDecorator(number): (Component) => Component
+
 
 ### React Story Book
 
