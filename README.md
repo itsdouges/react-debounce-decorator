@@ -1,28 +1,28 @@
-# [react-library-boilerplate](https://github.com/madou/react-library-boilerplate)
+# [react-debounce-decorator](https://github.com/madou/react-debounce-decorator)
 
-[![NPM version](http://img.shields.io/npm/v/react-library-boilerplate.svg?style=flat-square)](https://www.npmjs.com/package/react-library-boilerplate)
-[![NPM downloads](http://img.shields.io/npm/dm/react-library-boilerplate.svg?style=flat-square)](https://www.npmjs.com/package/react-library-boilerplate)
-[![Build Status](http://img.shields.io/travis/madou/react-library-boilerplate/master.svg?style=flat-square)](https://travis-ci.org/madou/react-library-boilerplate)
-[![codecov](https://codecov.io/gh/madou/react-library-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/madou/react-library-boilerplate)
-[![Dependency Status](http://img.shields.io/david/madou/react-library-boilerplate.svg?style=flat-square)](https://david-dm.org/madou/react-library-boilerplate)
+[![NPM version](http://img.shields.io/npm/v/react-debounce-decorator.svg?style=flat-square)](https://www.npmjs.com/package/react-debounce-decorator)
+[![NPM downloads](http://img.shields.io/npm/dm/react-debounce-decorator.svg?style=flat-square)](https://www.npmjs.com/package/react-debounce-decorator)
+[![Build Status](http://img.shields.io/travis/madou/react-debounce-decorator/master.svg?style=flat-square)](https://travis-ci.org/madou/react-debounce-decorator)
+[![codecov](https://codecov.io/gh/madou/react-debounce-decorator/branch/master/graph/badge.svg)](https://codecov.io/gh/madou/react-debounce-decorator)
+[![Dependency Status](http://img.shields.io/david/madou/react-debounce-decorator.svg?style=flat-square)](https://david-dm.org/madou/react-debounce-decorator)
 
 Quick description of what it does!
 
 <p align="center">
-  <img src="https://github.com/madou/react-library-boilerplate/blob/master/example.gif?raw=true" style="margin:0 auto" />
+  <img src="https://github.com/madou/react-debounce-decorator/blob/master/example.gif?raw=true" style="margin:0 auto" />
 </p>
 
 ## Installation
 
 ```sh
-npm install react-library-boilerplate
+npm install react-debounce-decorator
 ```
 
 ## Usage
 
 ```javascript
-import 'react-library-boilerplate/styles.css';
-import ReactStickyHeader from 'react-library-boilerplate';
+import 'react-debounce-decorator/styles.css';
+import ReactStickyHeader from 'react-debounce-decorator';
 import ReactDOM from 'react-dom';
 
 ReactDOM.render(

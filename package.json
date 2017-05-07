@@ -1,8 +1,8 @@
 {
-  "name": "react-library-boilerplate",
+  "name": "react-debounce-decorator",
   "version": "0.0.0",
   "description": "Project description.",
-  "repository": "madou/react-library-boilerplate",
+  "repository": "madou/react-debounce-decorator",
   "author": "Michael Dougall",
   "license": "MIT",
   "keywords": [],
