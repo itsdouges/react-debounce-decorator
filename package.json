@@ -1,6 +1,6 @@
 {
   "name": "react-debounce-decorator",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Injects hide and show props into a wrapped component.",
   "repository": {
     "type": "git",
