@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import { storiesOf } from '@kadira/storybook';
 import debounceDecorator from '../src/debounceDecorator';
-import type { InjectedProps } from '../src/debounceDecorator';
+import type { InjectedProps } from '../src';
 
 const WrappedView = debounceDecorator(300)(
   class View extends Component {
