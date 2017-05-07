@@ -27,30 +27,31 @@ import type { InjectedProps } from 'react-debounce-decorator';
 import debounceDecorator from 'react-debounce-decorator';
 
 debounceDecorator(150)(
-  class TooltipTrigger extends Component {
-    props: InjectedProps & {
+  class View extends Component {
+    props: InjectedProps;
+
+    state: {
       message: string,
+    } = { message: 'is anyone there?' };
+
+    hello = () => {
+      this.props.show(() => this.setState({
+        message: 'hello!',
+      }));
     };
 
-    show = (e) => {
-      const { message, show, showTooltip } = this.props;
-
-      // Call injected prop `show` when mouse enter. This will be called immedaitely.
-      show(() => showTooltip(true, message));
-    };
-
-    hide = (e) => {
-      const { hide, showTooltip } = this.props;
-
-      // Call injected prop `hide` on mouse leave. This will be debounced.
-      hide(() => showTooltip(false));
+    goodbye = () => {
+      this.props.hide(() => this.setState({
+        message: 'goodbye...',
+      }));
     };
 
     render () {
-      return cloneElement(this.props.children, {
-        onMouseEnter: this.show,
-        onMouseLeave: this.hide,
-      });
+      return (
+        <div onMouseEnter={this.hello} onMouseLeave={this.goodbye}>
+          {this.state.message}
+        </div>
+      );
     }
   }
 )
