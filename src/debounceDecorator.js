@@ -2,6 +2,7 @@
 
 import type { Children } from 'react';
 
+import React from 'react';
 import debounce from 'lodash/debounce';
 import noop from 'lodash/noop';
 
