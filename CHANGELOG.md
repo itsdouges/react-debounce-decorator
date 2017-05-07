@@ -6,9 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 ## [Unreleased][]
+### Changed
+- Travis and packagejson
 
 ## [0.1.1][] - 2017-05-07
-## Changed
+### Changed
 - Packagejson
 
 ## [0.1.0][] - 2017-05-07
