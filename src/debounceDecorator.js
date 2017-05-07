@@ -11,7 +11,7 @@ export type InjectedProps = {
   hide: (callback: Function) => void,
 };
 
-const tooltipDebounce = (wait: number = 150) => <TProps: {}>(Component: Children) => {
+const debounceDecorator = (wait: number = 150) => (Component: Children) => {
   let canHide = false;
 
   const debouncedHide = debounce((cb: ?Function) => {
@@ -30,8 +30,8 @@ const tooltipDebounce = (wait: number = 150) => <TProps: {}>(Component: Children
     debouncedHide(cb);
   }
 
-  const WrappedComponent = (props: TProps) => <Component {...props} show={show} hide={hide} />;
-  WrappedComponent.displayName = `TooltipDebounce(${Component.displayName})`;
+  const WrappedComponent = (props: *) => <Component {...props} show={show} hide={hide} />;
+  WrappedComponent.displayName = `DebounceDecorator(${Component.displayName})`;
   WrappedComponent.defaultProps = {
     show: noop,
     hide: noop,
@@ -39,4 +39,4 @@ const tooltipDebounce = (wait: number = 150) => <TProps: {}>(Component: Children
   return WrappedComponent;
 };
 
-export default tooltipDebounce;
+export default debounceDecorator;
